@@ -1,0 +1,71 @@
+body {
+    background-image: url(https://thepacman82.com/wp-content/uploads/2017/01/thepacman82_1-2-17-1080x1080.jpg)
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+.title{
+    font-family:'Satisfy', cursive;
+    font-style: italic;
+    color: gold;
+    margin-left: 50px
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 35vw;
+    
+}
+
+
+
+.hamburger-gif{
+    display: none;
+}
+/* .side-menu{
+    width: 50vw;
+    height: 100vh;
+    background: black
+}
+
+.side-menu-open{
+    display: block;
+    animation-name: open;
+    animation-duration: 1s;
+} */
+
+img  {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+@media (max-width: 970px) {
+    li {
+        display: none;
+    }
+    .hamburger-gif {
+        display: block
+    }
+}
+
+/* @keyframes open {
+    to {
+        transform: translateX(0px)
+    }
+}
+@keyframes close {
+    to {
+        transform: translateX(0px)
+    }
+    from {
+        transform: translateY(-610px)
+    }
+} */
