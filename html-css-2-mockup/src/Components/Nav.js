@@ -8,6 +8,15 @@ class Nav extends React.Component {
 
         }
     }
+
+    toggle= () => {
+        if(this.state.menuOpenStatus === 'side-menu-close' || this.state.menuOpenStatus === 'side-menu'){
+            this.setState({menuOpenStatus: 'side-menu-open'})
+        }else if (this.state.menuOpenStatus === 'side-menu-open'){
+            this.setState({menuOpenStatus: 'side-menu-close'})
+        }
+
+    }
     render(){
         return(
             <>
@@ -22,19 +31,23 @@ class Nav extends React.Component {
                         <li>About</li>
                         <li>Team</li>
                         <li>Contact</li>
-                        <li className='hamburger-gif'>
-                        <img src ="https://cdn.dribbble.com/users/1011558/screenshots/4615892/hamburger-03.gif" alt='burger'/>
+                        <li className='hamburger-gif side-menu'>
+                        <img 
+                        onClick={this.toggle}
+                        src ="https://cdn.dribbble.com/users/1011558/screenshots/4615892/hamburger-03.gif" 
+                        alt='burger'
+                        />
                         </li>
                     </ul>
                 </div>
             </nav>
-            {/* <div className={`${this.state.menuOpenStatus} side-menu`} >
+            <div className={`${this.state.menuOpenStatus} side-menu`} >
             <h1>Services</h1>
             <h1>Portfolio</h1>
             <h1>About</h1>
             <h1>Team</h1>
             <h1>Contact</h1>
-            </div> */}
+            </div>
             </>
         )
     }

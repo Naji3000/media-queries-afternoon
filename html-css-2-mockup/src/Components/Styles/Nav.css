@@ -24,24 +24,60 @@ ul {
 
 
 
-.hamburger-gif{
+.hamburger-gif, .side-menu{
     display: none;
 }
 /* .side-menu{
     width: 50vw;
     height: 100vh;
     background: black
+} */
+div.side-menu,.side-menu-open, .side-menu-close {
+    width: 400px;
+    height: 100vh;
+    background: goldenrod;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 3px 2px rgb(129, 129, 120);
+    transform: translateX(-610px);
+    font-size: 13px;
+    
 }
-
 .side-menu-open{
     display: block;
     animation-name: open;
     animation-duration: 1s;
-} */
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+.side-menu-close{
+    display: block;
+    animation: close 1s forwards ease;
+}
+
+@keyframes open {
+    to {
+        transform: translateX(0px)
+    }
+}
+@keyframes close {
+    to {
+        transform: translateX(0px)
+    }
+    from {
+        transform: translateY(-610px)
+    }
+}
+
+
+
+
 
 img  {
     width: 40px;
     height: 40px;
+    cursor: pointer;
 }
 
 
@@ -56,16 +92,3 @@ img  {
     }
 }
 
-/* @keyframes open {
-    to {
-        transform: translateX(0px)
-    }
-}
-@keyframes close {
-    to {
-        transform: translateX(0px)
-    }
-    from {
-        transform: translateY(-610px)
-    }
-} */
