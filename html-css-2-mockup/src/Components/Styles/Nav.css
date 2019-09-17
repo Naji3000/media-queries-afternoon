@@ -66,7 +66,7 @@ div.side-menu,.side-menu-open, .side-menu-close {
         transform: translateX(0px)
     }
     from {
-        transform: translateY(-610px)
+        transform: translateX(-610px)
     }
 }
 
