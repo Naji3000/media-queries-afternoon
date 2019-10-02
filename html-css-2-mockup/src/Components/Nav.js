@@ -1,5 +1,6 @@
 import React from 'react'
 import './Styles/Nav.css'
+
 class Nav extends React.Component {
     constructor(){
         super()
